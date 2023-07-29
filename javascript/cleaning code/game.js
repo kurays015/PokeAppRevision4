@@ -225,13 +225,10 @@ const img = document.querySelector('.random-pokeImg');
   setTimeout(() => findRandomPokemon(pokemonData), 300);
 
 
-
-
     //reset
   const tryAgainBtn = document.querySelector('#tryAgain');
 
   const resetGame = () => {
-    console.log('hehe')
     //close modal
     gameOverModal.close();
 
