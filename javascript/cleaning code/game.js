@@ -115,7 +115,6 @@ const findRandomPokemon = async (pokemonData) => {
 
   //pass the combined choices as argument to renderChoices
   renderChoices(threeChoices, generateRandomPokemon.name, pokemonData);
-  return pokemonData;
 }
 
 
@@ -224,14 +223,10 @@ const img = document.querySelector('.random-pokeImg');
   //load next random pokemon
   setTimeout(() => findRandomPokemon(pokemonData), 300);
 
-
-
-};
-//---------------
     //reset
   const tryAgainBtn = document.querySelector('#tryAgain');
 
-  const resetGame = () => {
+  const resetGame = async () => {
     //close modal
     gameOverModal.close();
 
@@ -253,7 +248,10 @@ const img = document.querySelector('.random-pokeImg');
     lifeContainer.appendChild(thirdLife);
 
     //generate new random pokemon
-    findRandomPokemon();
+    await findRandomPokemon(pokemonData);
   }
 
   tryAgainBtn.addEventListener('click', resetGame);
+
+};
+//---------------
