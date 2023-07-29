@@ -1,0 +1,433 @@
+@media screen and (max-width: 500px) {
+
+  .background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+    margin: 0 0.5em;
+    gap: 10px;
+    width: 150px;
+    transform: translateX(-200px);
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+
+  }
+ 
+  .buttons-container.show {
+    transform: translateX(0);
+  }
+ 
+  
+  .score {
+    display: none;
+  }
+  .scoreDisplay {
+    border-radius: 6px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    margin: 0 auto;
+  }
+  .points {
+    font-size: 10rem;
+  }
+
+
+  .generation {
+    width: 100%;
+  }
+  .hamburger-menu {
+    display: inline-block;
+
+  }
+ 
+  /* pokemon loading spin */
+
+
+  .loading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pokemon-logo {
+    width: 300px;
+    z-index: 1;
+    position: fixed;
+    transform: translateX(-500px);
+
+  }
+  .pokemon-logo.spin {
+    animation: spin 1s ease-in-out;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateX(-500px) rotate(360deg);
+    }
+    40% {
+      transform: translateX(0) rotate(720deg);
+    }
+    100% {
+      transform: translateX(500px) rotate(360deg);
+    }
+  }
+
+
+  /* loading spin ends */
+
+
+  .line {
+    transition: .4s ease-in-out;
+  }
+
+  /* Apply "X" transformation when .hamburger-menu is active */
+  .hamburger-menu.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .choices {
+    margin: 0;
+  }
+  .choices button {
+    margin: 0.5em;
+    
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  .life {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .leaderboard {
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid #cca9aa;
+    padding: 10px 15px;
+    color: #851C32;
+    transition: .3s ease-in-out;
+    letter-spacing: 0;
+  }
+  .leaderboard:active {
+    border: 1px solid #9e8b8b;
+    background-color: #851C32;
+    color: #fff;
+  }
+
+  .firstLife,
+  .secondLife,
+  .thirdLife {
+    transition: .3s ease-in-out;
+  }
+  .firstLife.fadeOut,
+  .secondLife.fadeOut,
+  .thirdLife.fadeOut {
+    animation: fadeOutY 1s ease-in-out;
+  }
+  @keyframes fadeOutY {
+    from {
+      transform: translateY(0) rotate(360deg);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+
+  .gameOverModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 200px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #37050F;
+    color: #fff;
+
+  }
+  .gameOverModal h1 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+  .gameOverModal #tryAgain {
+    width: 50%;
+  }
+  .gameOverModal div {
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #tryAgain {
+    height: 30px;
+    border: 1px solid #C7415C;
+    margin-top: 1em;
+    background-color: transparent;
+    color: springgreen;
+    font-size: 0.7rem;
+    font-weight: 600;
+  
+  }
+  #tryAgain:active {
+    border: 1px solid #fff;
+    color: #fff;
+
+  }
+  .modalScore {
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+  }
+  
+  
+}
+
+@media screen and (max-width: 767px) {
+
+  .background {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  .buttons-container {
+    flex-direction: column;
+    margin: 0 0.5em;
+    gap: 10px;
+    width: 150px;
+    transform: translateX(-200px);
+    transition: .5s ease-in-out;
+    position: absolute;
+    z-index: 1;
+
+  }
+ 
+  .buttons-container.show {
+    transform: translateX(0);
+  }
+ 
+  
+  .score {
+    display: none;
+  }
+  .scoreDisplay {
+    border-radius: 6px;
+    width: 80%;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    margin: 0 auto;
+  }
+  .points {
+    font-size: 10rem;
+  }
+
+
+  .generation {
+    width: 100%;
+  }
+  .hamburger-menu {
+    display: inline-block;
+
+  }
+ 
+  /* pokemon loading spin */
+
+
+  .loading {
+    display: flex;
+    justify-content: center;
+  }
+
+  .pokemon-logo {
+    width: 300px;
+    z-index: 1;
+    position: fixed;
+    transform: translateX(-800px);
+
+  }
+  .pokemon-logo.spin {
+    animation: spin 2s ease-in-out;
+  }
+
+  @keyframes spin {
+    0% {
+      transform: translateX(-800px) rotate(360deg);
+    }
+    40% {
+      transform: translateX(0) rotate(720deg);
+    }
+    100% {
+      transform: translateX(800px) rotate(360deg);
+    }
+  }
+
+
+  /* loading spin ends */
+
+
+  .line {
+    transition: .4s ease-in-out;
+  }
+
+  /* Apply "X" transformation when .hamburger-menu is active */
+  .hamburger-menu.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+
+  .hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
+  }
+
+  .choices {
+    margin: 0;
+  }
+  .choices button {
+    margin: 0.5em;
+    
+  }
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  
+  }
+  .life {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .leaderboard {
+    font-size: 0.7rem;
+    font-weight: 700;
+    border: 1px solid #cca9aa;
+    padding: 10px 15px;
+    color: #851C32;
+    transition: .3s ease-in-out;
+    letter-spacing: 0;
+  }
+  .leaderboard:active {
+    border: 1px solid #9e8b8b;
+    background-color: #851C32;
+    color: #fff;
+  }
+
+  .firstLife,
+  .secondLife,
+  .thirdLife {
+    transition: .3s ease-in-out;
+  }
+  .firstLife.fadeOut,
+  .secondLife.fadeOut,
+  .thirdLife.fadeOut {
+    animation: fadeOutY 1s ease-in-out;
+  }
+  @keyframes fadeOutY {
+    from {
+      transform: translateY(0) rotate(360deg);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(50px);
+      opacity: 0;
+    }
+  }
+
+  .gameOverModal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 200px;
+    z-index: 9999;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 10px;
+    text-align: center;
+    overflow: hidden;
+    background-color: #37050F;
+    color: #fff;
+
+  }
+  .gameOverModal h1 {
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 0;
+    font-size: 1rem;
+  }
+  .gameOverModal #tryAgain {
+    width: 50%;
+  }
+  .gameOverModal div {
+    height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  }
+  ::backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  #tryAgain {
+    height: 30px;
+    border: 1px solid #C7415C;
+    margin-top: 1em;
+    background-color: transparent;
+    color: springgreen;
+    font-size: 0.7rem;
+    font-weight: 600;
+  
+  }
+  #tryAgain:active {
+    border: 1px solid #fff;
+    color: #fff;
+
+  }
+  .modalScore {
+    margin-top: 0.5em;
+    font-size: 1.2rem;
+  }
+  
+  
+}
