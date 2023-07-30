@@ -108,7 +108,7 @@ const findRandomPokemon = async (pokemonData) => {
     setTimeout(() =>  {
       mobileLogo.classList.remove('spin');
       container.innerHTML = pokeHTML;
-    }, 1000)
+    }, 300)
   }
 
   //return value of chooseAnswer function
