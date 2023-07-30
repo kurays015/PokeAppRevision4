@@ -44,7 +44,9 @@
     font-size: 10rem;
   }
 
-
+  .scoreAndImg {
+    height: 400px;
+  }
   .generation {
     width: 100%;
   }
