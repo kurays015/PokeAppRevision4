@@ -44,9 +44,7 @@
     font-size: 10rem;
   }
 
-  .scoreAndImg {
-    height: 400px;
-  }
+
   .generation {
     width: 100%;
   }
@@ -67,24 +65,25 @@
     width: 300px;
     z-index: 1;
     position: fixed;
-    transform: translateX(-500px);
+    transform: translateX(-600px);
 
   }
   .pokemon-logo.spin {
-    animation: spin 1s ease-in-out;
+    animation: spinAndRoll 1s ease-in-out;
   }
 
-  @keyframes spin {
+  @keyframes spinAndRoll {
     0% {
-      transform: translateX(-500px) rotate(360deg);
+      transform: rotate(0deg);
     }
-    40% {
-      transform: translateX(0) rotate(720deg);
+    50% {
+      transform: rotate(720deg);
     }
     100% {
-      transform: translateX(500px) rotate(360deg);
+      transform: translateX(1000px);
     }
   }
+ 
 
 
   /* loading spin ends */
@@ -218,7 +217,9 @@
     margin-top: 0.5em;
     font-size: 1.2rem;
   }
-  
+  .scoreAndImg {
+    height: 400px;
+  }
   
 }
 
@@ -251,7 +252,9 @@
     transform: translateX(0);
   }
  
-  
+  .scoreAndImg {
+    height: 400px;
+  }
   .score {
     display: none;
   }
@@ -286,29 +289,30 @@
     display: flex;
     justify-content: center;
   }
-
   .pokemon-logo {
     width: 300px;
     z-index: 1;
     position: fixed;
-    transform: translateX(-800px);
+    transform: translateX(-600px);
+
 
   }
   .pokemon-logo.spin {
-    animation: spin 2s ease-in-out;
+    animation: spinAndRoll 1s ease-in-out;
   }
-
-  @keyframes spin {
+  @keyframes spinAndRoll {
     0% {
-      transform: translateX(-800px) rotate(360deg);
+      transform: rotate(0deg);
     }
-    40% {
-      transform: translateX(0) rotate(720deg);
+    50% {
+      transform: rotate(720deg);
     }
     100% {
-      transform: translateX(800px) rotate(360deg);
+      transform: translateX(1000px);
     }
   }
+ 
+
 
 
   /* loading spin ends */
