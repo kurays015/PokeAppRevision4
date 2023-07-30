@@ -136,6 +136,9 @@ main {
     opacity: 0;
   }
 }
+.pokemon-logo {
+  display: none;
+}
 .gameOverModal {
   position: absolute;
   top: 50%;
