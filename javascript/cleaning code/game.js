@@ -105,7 +105,10 @@ const findRandomPokemon = async (pokemonData) => {
 
   if(found && hasValidData) {
     const pokeHTML = await renderRandomPokemon(found);
-    container.innerHTML = pokeHTML;
+    setTimeout(() =>  {
+      mobileLogo.classList.remove('spin');
+      container.innerHTML = pokeHTML;
+    }, 1000)
   }
 
   //return value of chooseAnswer function
